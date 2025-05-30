@@ -4,7 +4,7 @@ import ptBR from './localizacao/ptBR.json'
 import Kalend, { CalendarView } from 'kalend'
 import 'kalend/dist/styles/index.css';
 import { useRecoilValue } from 'recoil';
-import { listaDeEventos } from '../../state/atom';
+import { listaDeEventosState } from '../../state/atom';
 
 interface IKalendEvento {
   id?: number
@@ -17,7 +17,7 @@ interface IKalendEvento {
 const Calendario: React.FC = () => {
 
   const eventosKalend = new Map<string, IKalendEvento[]>();
-  const eventos = useRecoilValue(listaDeEventos)
+  const eventos = useRecoilValue(listaDeEventosState)
 
   eventos.forEach(evento => {
     const chave = evento.inicio.toISOString().slice(0, 10)

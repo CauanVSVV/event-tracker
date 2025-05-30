@@ -3,11 +3,11 @@ import { IEvento } from '../../interfaces/IEvento';
 import style from './Formulario.module.scss';
 import { obterId } from '../../util';
 import { useSetRecoilState } from 'recoil';
-import { listaDeEventos } from '../../state/atom';
+import { listaDeEventosState } from '../../state/atom';
 
 const Formulario: React.FC = () => {
 
-  const setlistaDeEventos = useSetRecoilState<IEvento[]>(listaDeEventos)
+  const setlistaDeEventos = useSetRecoilState<IEvento[]>(listaDeEventosState)
   
   const [descricao, setDescricao] = useState('')
   const [dataInicio, setDataInicio] = useState('')
