@@ -2,7 +2,7 @@ import React from 'react';
 import Evento from '../Evento';
 import Filtro from '../Filtro';
 import style from './ListaDeEventos.module.scss';
-import useListaDeEventos from '../../hooks/useListaDeEventos';
+import useListaDeEventos from '../../state/hooks/useListaDeEventos';
 
 const ListaDeEventos: React.FC<{ 
   aoFiltroAplicado: (data: Date | null) => void }> = ({ aoFiltroAplicado }) => {

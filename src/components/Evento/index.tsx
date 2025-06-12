@@ -3,7 +3,7 @@ import { IEvento } from '../../interfaces/IEvento'
 import style from './Evento.module.scss';
 import EventoCheckbox from './EventoCheckbox';
 
-import useDeletarEvento from '../../hooks/useDeletarEvento';
+import useDeletarEvento from '../../state/hooks/useDeletarEvento';
 
 const Evento: React.FC<{ evento: IEvento}> = ({ evento }) => {
 

@@ -1,6 +1,6 @@
 import { useSetRecoilState } from "recoil"
-import { IEvento } from "../interfaces/IEvento"
-import { listaDeEventosState } from "../state/atom"
+import { IEvento } from "../../interfaces/IEvento"
+import { listaDeEventosState } from "../../state/atom"
 
 const useDeletarEvento = () => {
  const setListaDeEventos = useSetRecoilState<IEvento[]>(listaDeEventosState)
